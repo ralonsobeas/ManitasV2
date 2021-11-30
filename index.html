@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Juego Manitas</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+
+    <script src="manos.js"></script>
+    <script src="botones.js"></script>
+  </head>
+  <body>
+    <h2 class="text-center">Juego de encontrar la llave</h2>
+
+    <div class="row" >
+      <div class="col text-center">
+        <img class="manoCerrada img-fluid" id="cerrada1" src="assets_examen_1/closed1.png" alt="" width="200px" height="200px" onclick="clickMano(1)">
+        <img class="img-fluid" id="llave1" src="assets_examen_1/key.png" alt="" width="200px" height="200px" style="display:none">
+        <img class="img-fluid" id="abierta1" src="assets_examen_1/left.png" alt="" width="200px" height="200px" style="display:none">
+      </div>
+      <div class="col text-center">
+        <img class="manoCerrada img-fluid" id="cerrada2" src="assets_examen_1/closed2.png" alt="" width="200px" height="200px" onclick="clickMano(2)">
+        <img class="img-fluid" id="llave2" src="assets_examen_1/key.png" alt="" width="200px" height="200px" style="display:none">
+        <img class="img-fluid" id="abierta2" src="assets_examen_1/right.png" alt="" width="200px" height="200px" style="display:none">
+      </div>
+    </div>
+
+    <div class="row flex-nowrap" style="display:flex">
+      <div class="col text-center">
+        <p style="background:orange;margin-right: 20px" id="puntosJugador">Puntos del jugador: 0</p>
+      </div>
+      <div class="col text-center">
+        <p style="background:orange" id="puntosMaquina">Puntos de la máquina: 0</p>
+      </div>
+    </div>
+    <div class="display:flex">
+      <div class="mt-1 text-center">
+        <button class="btn btn-primary" id="btnReiniciar" type="button" name="button" style="border-radius: 10px;" onclick="reiniciar()">Reiniciar contadores</button>
+      </div>
+      <div class="mt-1 text-center">
+        <button class="btn btn-primary" id="btnPista" type="button" name="button" style="border-radius:10px;" onclick="pista()">Pista</button>
+      </div>
+    </div>
+
+    <p style="display:none" id="llavePos">1</p>
+
+    <p style="display:none" id="pJugador" >0</p>
+    <p style="display:none" id="pMaquina" >0</p>
+  </body>
+</html>
